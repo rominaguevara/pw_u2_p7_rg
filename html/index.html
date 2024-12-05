@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-   <div id="myApp"><!--ESTE ID VA A REPRESENTARA MI APLICACIÓN POR LO QUE DEBE IR EN EL JS-->
+    <title>Vue</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--ESTO ES USANDO EL CDN-->
-    <script src="./js/app.js"></script>
-   </div>
+</head>
+
+<body>
+    <div id="myApp"><!--ESTE ID VA A REPRESENTARA MI APLICACIÓN POR LO QUE DEBE IR EN EL JS-->
+
+        <h1>Hola Mundo</h1>
+        <p>Con Vue.JS</p>
+        <p>{{1+2}}</p>
+        <p>{{[1,2,3,4,5,6,7]}}</p>
+        <p>{{ {nombre:"Romina", apellido: "Guevara"} }}</p>
+        <p>{{false? 'Activo': 'Inactivo'}}</p>
+        <p>1===1</p>
+        <p>{{1===1}}</p>
+        <p>El mensaje es: {{mensaje}}</p>
+        <p>La edad es: {{edad}}</p>
+        <p>¿Es igual a 25? {{edad===25}}</p>
+        <button v-on:click="cambiarMensaje">Cambiar</button>
+    </div>
+    {{1+2}}
+    <script src="../js/app.js"></script>
+
 </body>
+
 </html>

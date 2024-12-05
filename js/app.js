@@ -1,10 +1,19 @@
 console.log(Vue);
 
 const app = Vue.createApp({
-    template: `
-    <h1>Hola Mundo</h1>
-    <p>Con Vue.JS</p>
-    `
+    //Options API
+    methods: {
+        cambiarMensaje(){
+            this.mensaje = 'Nuevo mensaje';
+            this.edad = 24
+        }
+    },
+    data() {
+        return {
+            mensaje: 'Hola Mundo Pweb',
+            edad:25
+        }
+    }
 })
 
 app.mount('#myApp')
