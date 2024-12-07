@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Persona</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="appFormularioPersona">
+        <h1>Formulario</h1>
+        <form @submit.prevent="guardarPersona">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" v-model="persona.nombre" type="text"/>
+
+            <label for="apellido">Apellido:</label>
+            <input id="apellido" v-model="persona.apellido" type="text"/>
+
+            <label for="hobby">Hobbie:</label>
+            <input id="hobby" v-model="persona.hobby" type="text"/>
+
+            <label for="lugar">Lugar de nacimiento:</label>
+            <input id="lugar" v-model="persona.lugar" type="text"/>
+
+            <button type="submit">Guardar</button>
+        </form>
+
+        <h2>Registros</h2>
+        <textarea rows="5" cols="50" readonly>
+        {{registros.join('\n')}}
+        </textarea>
+    </div>
+    <script src="../js/appFormularioPersona.js"></script>
+</body>
+
+</html>
